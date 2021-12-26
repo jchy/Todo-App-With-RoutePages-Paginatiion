@@ -1,10 +1,12 @@
-import Todo from "./Components/Todo";
 import "./styles.css";
+import Navbar from "./Components/Navbar";
+import AllRoutes from "./routes/AllRoutes";
 
 export default function App() {
   return (
     <div className="App">
-      <Todo />
+      <Navbar />
+      <AllRoutes />
     </div>
   );
 }

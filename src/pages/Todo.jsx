@@ -36,7 +36,7 @@ const Todo = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
       <input
         type="number"
         placeholder="How many content you want perPage"

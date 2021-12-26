@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
   getTodosFailure,
@@ -26,6 +27,7 @@ const TodoItem = ({ title, status, onDelete, id, onToggle }) => {
       <div>{`${status}`}</div>
       <button onClick={() => onDelete(id)}>DELETE</button>
       <button onClick={() => onToggle(id)}>TOGGLE</button>
+      <Link to={`/todo/${id}`}>Edit</Link>
     </div>
   );
 };
@@ -75,7 +77,7 @@ const TodoList = ({ allFunc }) => {
   );
 
   return (
-    <div>
+    <div style={{ marginTop: "20px" }}>
       {isLoading && <h3>...Loading</h3>}
       {isError && <h3>404!!! Something went wrong</h3>}
       {todos.map((item) => (

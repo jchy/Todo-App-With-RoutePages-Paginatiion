@@ -4,7 +4,7 @@ export const TodoInput = ({ onAdd }) => {
   const [state, setState] = useState("");
 
   return (
-    <div>
+    <div style={{ marginTop: "20px" }}>
       <input
         type="text"
         value={state}
