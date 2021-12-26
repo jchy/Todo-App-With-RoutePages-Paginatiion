@@ -25,8 +25,8 @@ const TodoItem = ({ title, status, onDelete, id, onToggle }) => {
     >
       <div>{title} - </div>
       <div>{`${status}`}</div>
-      <button onClick={() => onDelete(id)}>DELETE</button>
-      <button onClick={() => onToggle(id)}>TOGGLE</button>
+      {/* <button onClick={() => onDelete(id)}>DELETE</button>
+      <button onClick={() => onToggle(id)}>TOGGLE</button> */}
       <Link to={`/todo/${id}`}>Edit</Link>
     </div>
   );
